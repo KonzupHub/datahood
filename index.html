@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/simbolo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datahood - Observatório Turístico</title>
+    <style>
+      /* Controle rigoroso de tamanho de imagens */
+      img, svg {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+      
+      /* Remover qualquer overflow que faça as imagens "explodirem" */
+      * {
+        box-sizing: border-box;
+        max-width: 100vw;
+        overflow-wrap: break-word;
+      }
+      
+      body {
+        overflow-x: hidden;
+      }
+      
+      #hero-logo {
+        max-width: 300px !important;
+        max-height: 100px !important;
+        width: auto !important;
+        height: auto !important;
+      }
+      
+      /* Fix para elementos específicos problemáticos */
+      header, .header, div[class*="header"] {
+        max-height: 80px !important;
+      }
+      
+      /* Limitar tamanho de qualquer elemento que pode estar causando problema */
+      [style*="background"] {
+        background-size: cover !important;
+        max-height: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html> 
